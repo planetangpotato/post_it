@@ -1,0 +1,30 @@
+<ion-view ng-controller="edit" view-title="CCS">
+  <div class="bar bar-header" style="background-color:#f69011;">
+    <a href="#/announcement" class="button icon ion-arrow-left-c"></a>
+    <h1 class="title" style="color:white;">Edit Announcement</h1>
+  </div>
+
+   <ion-content style="text-align: center; margin-top: 10%;">
+     <form data-ng-submit="add()" clas="todo-form">
+     <div class="list list-inset" >
+       <div class="input group" style="margin-top:5px; padding:10px;">
+        <label class="item item-input">
+          <input type="text" id="name" ng-model="aname" placeholder="" >
+        </label>
+      </div>
+
+        <div class="input group" style="border-radius:10px;padding:10px; ">
+
+           <label class="item item-input" >
+           <textarea name="text" id="description" ng-model="adesc" style="height:100px;" placeholder=""></textarea>
+           </label>
+       </div>
+
+       <button type="submit" class="button button-block" style="border-radius: 100px; background-color:#f09811; color:white;">
+         Edit
+         </button> <br>
+
+
+    </div>
+  </ion-content>
+</ion-view>

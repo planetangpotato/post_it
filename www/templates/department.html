@@ -1,0 +1,111 @@
+<ion-view ng-contoller="department" view-title="Announcements">
+  <div class="bar bar-header" style="background-color:	#f69011;">
+    <a href="#/tab/department" class="button icon ion-arrow-left-c"></a>
+    <h1 class="title" style="color:white;">Announcement</h1>
+    <a href="#/addannouncement" class="button icon ion-plus"></a>
+  </div>
+   <ion-content class="padding" style="text-align: center;">
+
+    <ion-list>
+      <br><br>
+
+      <div class="padding">
+        <div class="list card" style="margin:10px; padding:10px; box-shadow: 10px 10px 5px #E0E0E0; border-radius:5px;">
+             <div style="margin:10px; padding:10px; box-shadow: 0px 0px 0px #E0E0E0; border-radius:5px" >
+               <h3>Gordon College CCS</h3>
+               <div  style="background-color:#f09811; height:3px;"></div>
+                <div ng-repeat="a in announcementlist track by $index">
+                  <div class="row">
+                    <span>{{a.name}}</span>
+                  </div>
+                </div>
+                 <!-- <p >ANNOUNCEMENT<br>
+                    Registration is now OPEN for the CCS Seminar Workshop Series happening on July 17-19, 2017. Topics include:<br>
+                    -HTML<br>
+                    -CSS <br>
+                    -Javascript -->
+             </div>
+             <div class="row">
+               <div class="col"><button class="button button-clear icon ion-edit" style="color:	#f69011;"></button></div>
+               <div class="col"></div>
+               <div class="col"></div>
+               <div class="col"></div>
+               <div class="col"><button class="button button-clear icon ion-trash-b" style=	"color:#f69011;"></button></div>
+             </div>
+             </div>
+           </div><br>
+
+           <div class="list card" style="margin:10px; padding:10px; box-shadow: 10px 10px 5px #E0E0E0; border-radius:5px;">
+                <div style="margin:10px; padding:10px; box-shadow: 0px 0px 0px #E0E0E0; border-radius:5px" >
+                  <h3>Gordon College CCS</h3>
+                  <div  style="background-color:#f09811; height:3px;"></div>
+                    <p >ANNOUNCEMENT<br>
+                       Registration is now OPEN for the CCS Seminar Workshop Series happening on July 17-19, 2017. Topics include:<br>
+                       -HTML<br>
+                       -CSS <br>
+                       -Javascript
+                </div>
+                <div class="row">
+                  <div class="col"><button class="button button-clear icon ion-edit" style="color:	#f69011;"></button></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col"><button class="button button-clear icon ion-trash-b" style=	"color:#f69011;"></button></div>
+                </div>
+            </div><br>
+
+                <div class="list card" style="margin:10px; padding:10px; box-shadow: 10px 10px 5px #E0E0E0; border-radius:5px;">
+                     <div style="margin:10px; padding:10px; box-shadow: 0px 0px 0px #E0E0E0; border-radius:5px" >
+                       <h3>Gordon College CCS</h3>
+                       <div  style="background-color:#f09811; height:3px;"></div>
+                         <p >ANNOUNCEMENT<br>
+                            Registration is now OPEN for the CCS Seminar Workshop Series happening on July 17-19, 2017. Topics include:<br>
+                            -HTML<br>
+                            -CSS <br>
+                            -Javascript<br>
+                     </div>
+                     <div class="row">
+                       <div class="col"><button class="button button-clear icon ion-edit" style="color:	#f69011;"></button></div>
+                       <div class="col"></div>
+                       <div class="col"></div>
+                       <div class="col"></div>
+                       <div class="col"><button class="button button-clear icon ion-trash-b" style=	"color:#f69011;"></button></div>
+                     </div>
+                </div><br>
+
+
+
+
+
+           <!-- <div style="margin:10px; padding:10px; box-shadow: 10px 10px 5px #E0E0E0; border-radius:5px" >
+           <h3>Mission</h3>
+           <div  style="background-color:#64DD17; height:3px;"></div>
+           <p >To produce well-trained, skilled, dynamic, and competitive individuals imbued with values and attitudes and responsive to the changing needs of the local, national and global communities.</p>
+         </div><br>
+
+           <div style="margin:10px; padding:10px; box-shadow: 10px 10px 5px #E0E0E0; border-radius:5px" >
+           <h2>Goals</h2>
+           <div  style="background-color:#64DD17; height:3px;"></div>
+           <p>Gordon College shall:<br>
+             1.provide opportunities that will enable individuals to acquire a high level of professional,
+             technical and vocational courses of studies <br>
+             2.develop innovative programs, projects and models of practice by undertaking research and studies<br>
+             3.promote community development through relevant
+             extension programs<br>
+             4.provide opportunities for entrepreneurship and employability of
+             graduates.<br>
+           </div> -->
+         </div>
+
+<!-- <a type="submit" class="button button-medium" style="background-color:#63795d; color:white; opacity:10px" href="#/ccs">
+  College of Computer Studies (CCS) </a><br><br> -->
+  <!-- <a type="submit" class="button button-medium button-positive" style="background-color:#63795d; color:white; opacity:10px" href="#/tab/ccs">
+    College of  Bussiness and Accountancy (CBA) </a><br><br>
+    <a type="submit" class="button button-medium button-positive" style="background-color:#63795d; color:white; opacity:10px" href="#/tab/ccs">
+    College of Arts and Sciences (CEAS)</a><br><br>
+      <a type="submit" class="button button-medium button-positive" style="background-color:#63795d; color:white; opacity:10px" href="#/tab/ccs">
+      College of Allied Health and Studies (CAHS)</a><br> -->
+    </ion-list>
+
+  </ion-content>
+</ion-view>

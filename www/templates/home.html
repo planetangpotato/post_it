@@ -1,0 +1,28 @@
+<ion-view ng-controller="TodoController" view-title="post-it">
+  <div class="bar bar-header" style="background-color:#359cfb;">
+    <h1 class="title" style="color:white;">Home</h1>
+  </div>
+
+   <ion-content style="text-align: center; margin-top: 10%;" >
+
+     <div style="background: url(img/cover1.jpg); background-repeat: no-repeat; background-size:cover; height:140px;background-position: center;"></div>
+        
+    <div class="card padding" ng-click="qoutesclick(qoutes1)"><b id="qoutes"></b>Click me</div>
+
+     <form data-ng-submit="add()" clas="todo-form">
+     <div class="list list-inset" >
+       <div class="input group" style="border-radius:10px;padding:10px; ">
+         <label class="item item-input" style="border-color:black;">
+           <textarea name="text" id="description" ng-model="adddescription" style="height:100px; " placeholder="What do you feel today?"></textarea>
+        </label>
+       </div>
+
+
+       <button type="submit" class="button button-block" style="border-radius: 100px; background-color:#359cfb; color:white;">
+         POST-IT
+         </button> <br>
+
+
+    </div>
+  </ion-content>
+</ion-view>

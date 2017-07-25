@@ -1,0 +1,42 @@
+<ion-view ng-controller="edit" view-title="CCS">
+  <div class="bar bar-header" style="background-color:	#359cfb;">
+    <a href="#/tab/home" class="button icon ion-arrow-left-c"></a>
+    <h1 class="title" style="color:white;">Edit</h1>
+    <!-- <a href="#/addannouncement" class="button icon ion-plus"></a> -->
+  </div>
+   <ion-content class="padding" style="text-align: center;">
+
+    <ion-list>
+      <br><br>
+
+      </div>
+      <form data-ng-submit="add()" clas="todo-form">
+      <div class="list list-inset" ><span id="me" hidden=""></span><span id="name" hidden=""></span>
+      <div class="input group" style="border-radius:10px;padding:10px; ">
+      <label class="item item-input" style="border-color:black;">
+        <textarea name="text" id="description" ng-model="adddescription" style="height:100px; " placeholder="editme"></textarea>
+      </label>
+
+
+      <button type="submit" ng-click="save()" class="button button-block" style="border-radius: 100px; background-color:#359cfb; color:white;">
+    EDIT
+      </button> <br>
+    </div>
+
+<!--
+      <div class="padding">
+        <div class="list card"  ng-repeat="a in announcementlist track by $index" style="margin:10px; padding:10px; box-shadow: 10px 10px 5px #E0E0E0; border-radius:5px;">
+             <div style="margin:10px; padding:10px; box-shadow: 0px 0px 0px #E0E0E0; border-radius:5px" >
+               <h3>anonymous</h3>
+                     <h3>{{a.announcementdescription}}</h3>
+               <div  style="background-color:#f09811; height:3px;"></div>
+                <div>
+                  <div class="row">
+
+                  </div>
+                </div>
+              </div> -->
+
+    </ion-list>
+  </ion-content>
+</ion-view>

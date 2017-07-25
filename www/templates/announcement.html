@@ -1,0 +1,30 @@
+<ion-view view-title="post-it">
+  <div class="bar bar-header" style="background-color:	#359cfb;">
+    <h1 class="title" style="color:white;">My Day</h1>
+    </div>
+   <ion-content class="padding" style="text-align: center;">
+
+    <ion-list>
+
+          <div class="list card" ng-repeat="a in announcementlist track by $index" style=" border-radius:5px; border-color:black;">
+             <div style="margin:10px; padding:10px; box-shadow: 0px 0px 0px #E0E0E0; border-radius:5px; " >
+               <h4>Anonymous</h4>
+               <div  style="background-color:#359cfb; height:3px;"></div>
+                <div>
+                    <p>{{a.announcementdescription}}</p>
+                    <div class="row" >
+                       <div class="col">
+                         <!-- <button class="button button-clear icon ion-edit" style="color:	#f69011;"></button> -->
+                         <button ng-click="edit({{a.announcementid}})" class="button button-clear icon ion-edit" style=	"color:#359cfb;"></button>
+                       </div>
+                       <div class="col"></div>
+                       <div class="col"></div>
+                       <div class="col"></div>
+                       <div class="col"><button ng-click="deletecom(a.announcementid)" class="button button-clear icon ion-trash-b" style=	"color:#359cfb;"></button>
+                      </div>
+                     </div>
+                     </div>
+                   </div><br>
+    </ion-list>
+  </ion-content>
+</ion-view>

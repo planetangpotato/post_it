@@ -1,0 +1,39 @@
+<ion-view view-title="Log In">
+  <div class="bar bar-header" style="background-color:#359cfb;">
+    <h1 class="title" style="color:white;">Log In</h1>
+  </div>
+
+  <ion-content ng-controller="login">
+
+		   <!-- <center>
+		   		<img src="img/asd.png" style="width:250px; height:auto; padding-top:50px;">
+        </center> -->
+    <br>
+<div  style="background: url(img/logo1.png); background-repeat: no-repeat; background-size:40%; margin-top: 10px; height:200px; background-position:center; box-shadow:insert 3px 4px 5px #000;">
+</div>
+      <div style="margin:5%;">
+        <center> <h4> Login to your account </h4></center>
+              <form ng-submit="loginform()">
+                <p style="text-align:center;padding-bottom: 10px;">{{error}}</p>
+                <br>
+
+                <div style="margin:5px; padding:5px; ">
+                <!-- <div class="ion icon ion-person"style="margin:20%;"> -->
+                  <label class="item item-input icon ion-person  " style="border-color:black;border-top-color:transparent;border-left-color:transparent;border-right-color:transparent;">
+                  <input type="text" placeholder="Username" ng-model="username" required>
+                  </label>
+                </div>
+                <div style="margin:5px; padding:2px; " >
+                  <label class="item item-input icon ion-locked" style="border-color:black;border-top-color:transparent;border-left-color:transparent;border-right-color:transparent;">
+                  <input type="password" placeholder="Password" ng-model="password" required>
+                  </label>
+                </div>
+
+              <button type="submit" class="button button-block" style="border-radius:6px; background-color:#359cfb; color:white;">
+                Submit
+                </button>
+            </form>
+        </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,30 @@
+<ion-view ng-controller="department" view-title="Your Day">
+  <div class="bar bar-header" style="background-color:#359cfb;">
+    <h1 class="title" style="color:white;"></h1>
+   <ion-content class="padding" style="text-align: center;">
+    <ion-list>
+      <br><br>
+      <!-- <div class="padding"> -->
+        <div class="list card"  ng-repeat="a in announcementlist track by $index" style="border-radius:5px; border-color:#000;">
+             <div style="margin:10px; padding:10px; box-shadow: 0px 0px 0px #E0E0E0; border-radius:5px" >
+               <h3>Anonymous</h3>
+                 <div  style="background-color:#359cfb; height:3px;"></div>
+                <div>
+                  <!-- <br><p>{{a.announcementname}}</p> -->
+                    <p>{{a.announcementdescription}}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                </div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"><button class="button button-clear icon ion-trash-b" style=	"color:#359cfb;"></button>
+                </div>
+              </div>
+              </div>
+           <!-- </div><br> -->
+    </ion-list>
+  </ion-content>
+</ion-view>

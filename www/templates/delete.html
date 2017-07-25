@@ -1,0 +1,20 @@
+<ion-view view-title="Delete" ng-controller ='deleteco' style="text-align:center; background-image:url(img/ahh.png); background-repeat; background-size: cover;">
+	<ion-content>
+				<label class="item item-input">
+					<i class="icon ion-ios-search placeholder-icon">
+					</i>
+					<input type="text" placeholder="Search subject" ng-model="search">
+				</label>
+
+
+				<div class="card" ng-repeat="x in comments | filter:search">
+					<div class="item item-text-wrap" >
+						<p>Subject: <span>{{x.addsubject}}</span></p><br>
+						<p>Status: <span>{{x.addcomment}}</span></p><br>
+							<button ng-click="deletecom(x.id)" class="button button-block button-positive"  style="border-radius: 10px; color: #42bcf4; text-align: center; ">
+							Delete
+							</button>
+					</div>
+				</div>
+	</ion-content>
+</ion-view>
