@@ -1,5 +1,19 @@
 angular.module('starter.controllers', [])
 
+.controller('setup',function($scope,$state){
+
+  $scope.set = function(){
+    var a = document.getElementById('server').value;
+    if(a == ""){
+      $scope.seterror = 'Please input server';
+    }else{
+      localStorage.setItem('server',a);
+      $state.go('login');
+    }
+  }
+
+})
+
 ////login
 .controller('login', function ($scope, $http, $state, $ionicHistory ){
     $scope.loginform = function(){
@@ -10,7 +24,7 @@ angular.module('starter.controllers', [])
 
         $http.defaults.headers.post['Content-Type'] = 'applicaation/x-www-form-urlencoded; charset=UTF-8';
         $http({
-            url: 'http://localhost/post-it/admin/www/php/login.php',
+            url: 'http://'+localStorage.getItem('server')+'/post-it/admin/www/php/login.php',
             method: "POST",
             data:{
                 'username' : username,
@@ -73,7 +87,7 @@ angular.module('starter.controllers', [])
     $scope.add = function(){
       var description = document.getElementById('description').value;
       $http({
-        url:"http://localhost/post-it/admin/www/php/add.php",
+        url:"http://"+localStorage.getItem('server')+"/post-it/admin/www/php/add.php",
         method:"POST",
         data:{
           'adddescription':description
@@ -91,7 +105,7 @@ angular.module('starter.controllers', [])
       $scope.editlabel = "";
     var id= JSON.parse(localStorage.getItem('editid'));
     console.log(id);
-    $http.get("http://localhost/post-it/admin/www/php/editdata.php?id="+id)
+    $http.get("http://"+localStorage.getItem('server')+"/post-it/admin/www/php/editdata.php?id="+id)
     .then(function(a){
       console.log(a.data);
       $scope.announcementlist = a.data;
@@ -110,7 +124,7 @@ $scope.save = function(a){
   var a =document.getElementById('me').value;
   // console.log(a);
   var b = document.getElementById('description').value;
-  $http.get("http://localhost/post-it/admin/www/php/edit.php?id="+a+"&content="+b);
+  $http.get("http://"+localStorage.getItem('server')+"/post-it/admin/www/php/edit.php?id="+a+"&content="+b);
   $state.go("tab.announcement");
 }
     })
@@ -125,7 +139,7 @@ $scope.save = function(a){
         $scope.editlabel = "Please complete the form";
       }else{
         $http({
-          url:"http://localhost/post-it/admin/www/php/edit.php",
+          url:"http://"+localStorage.getItem('server')+"/post-it/admin/www/php/edit.php",
           method:"POST",
           data:{
             'add':name,
@@ -153,7 +167,7 @@ $state.go("edit");
 }
 
     $http({
-      url:"http://localhost/post-it/admin/www/php/getdata.php",
+      url:"http://"+localStorage.getItem('server')+"/post-it/admin/www/php/getdata.php",
       method:"GET"
     })
 
@@ -165,10 +179,10 @@ $state.go("edit");
 })
 //delete
 $scope.deletecom = function (a){
-$http.get('http://localhost/post-it/admin/www/php/delete.php?id='+a).then(function(a){
+$http.get('http://'+localStorage.getItem('server')+'/post-it/admin/www/php/delete.php?id='+a).then(function(a){
   console.log(a);
   $http({
-    url:"http://localhost/post-it/admin/www/php/getdata.php",
+    url:"http://"+localStorage.getItem('server')+"/post-it/admin/www/php/getdata.php",
     method:"GET"
   })
 
